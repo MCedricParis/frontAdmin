@@ -1,0 +1,25 @@
+<form>
+  <!-- <button class="btn btn-danger" (click)="Delete()">Suppress</button>
+ <div *ngIf="delClick==true"> --> 
+   <input #Delete type="text" placeholder="Entrez l'Id de groupe">
+   <button class="btn btn-danger" (click)="DeleteGroupe(Delete.value)">Suppress</button>
+<!-- </div> --> 
+ </form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">idGroupe</th>
+      <th scope="col">Chef du groupe</th>
+      <th scope="col">Membres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let uL of groupeList">
+      <th scope="row">{{uL.idGroupe}}</th>
+      <td>{{uL.user}}</td>
+      <td>{{uL.List}}</td>
+    </tr>
+
+  </tbody>
+</table>

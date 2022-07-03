@@ -1,0 +1,29 @@
+
+  <form>
+    <!-- <button class="btn btn-danger" (click)="Delete()">Suppress</button>
+   <div *ngIf="delClick==true"> --> 
+     <input #Delete type="text" placeholder="Entrez l'Id de la bière">
+     <button class="btn btn-danger" (click)="DeleteBiere(Delete.value)">Suppress</button>
+  <!-- </div> --> 
+   </form>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">idBiere</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Catégorie</th>
+        <th scope="col">Style</th>
+        <th scope="col">Degrès</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let uL of biereList">
+        <th scope="row">{{uL.idBiere}}</th>
+        <td>{{uL.nom}}</td>
+        <td>{{uL.cat.nomCat}}</td>
+        <td>{{uL.style.nom}}</td>
+        <td>{{uL.degre}}</td>
+      </tr>
+    </tbody>
+  </table>
