@@ -23,7 +23,8 @@ ngOnInit() {
       },
       error: (err) => { console.log(err) }
 
-    });}
+    });
+  }
 
 DeleteUser(id:string){
   this.http.delete("http://localhost:8086/user/" + id).subscribe({next: data =>{}
