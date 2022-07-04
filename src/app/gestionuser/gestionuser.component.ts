@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestionuser',
@@ -11,7 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class GestionuserComponent implements OnInit {
 
   userList:any;
-constructor(private http:HttpClient, private route:ActivatedRoute) { 
+constructor(private http:HttpClient, private route:ActivatedRoute,
+  private rout:Router) { 
 
 }
 
@@ -28,9 +29,10 @@ ngOnInit() {
 
 DeleteUser(id:string){
   this.http.delete("http://localhost:8086/user/" + id).subscribe({next: data =>{}
-  //this.route.navigate('/profile')
    ,error: (err) => { console.log(err) }
-})}
+})
+window.location.reload()
+}
 }
 
 

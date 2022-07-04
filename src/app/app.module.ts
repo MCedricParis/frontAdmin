@@ -11,6 +11,8 @@ import { GestionavisComponent } from './gestionavis/gestionavis.component';
 import { GestiongroupeComponent } from './gestiongroupe/gestiongroupe.component';
 import { GestionbiereComponent } from './gestionbiere/gestionbiere.component';
 import { CreationuserComponent } from './creationuser/creationuser.component';
+import { CreationBiereComponent } from './creation-biere/creation-biere.component';
+import { CrationBarComponent } from './cration-bar/cration-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { CreationuserComponent } from './creationuser/creationuser.component';
     GestionavisComponent,
     GestionbiereComponent,
     CreationuserComponent,
+    CreationBiereComponent,
+    CrationBarComponent,
   ],
   imports: [
     BrowserModule,

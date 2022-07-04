@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestiongroupeComponent implements OnInit {
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient,
+    private route:Router) { 
 
   }
   
@@ -29,7 +31,11 @@ export class GestiongroupeComponent implements OnInit {
 
   DeleteGroupe(id:string){
     this.http.delete("http://localhost:8086/groupe/" + id).subscribe({next: data =>
-     {},error: (err) => { console.log(err) }
+     {},
+     error: (err) => { console.log(err) }
+     
   })
+  window.location.reload()
   }
-  }
+}
+  

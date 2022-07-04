@@ -1,13 +1,7 @@
+<section class="hero-section">
+<div class="table-scroll scrollbar">
 
-  <form>
-    <!-- <button class="btn btn-danger" (click)="Delete()">Suppress</button>
-   <div *ngIf="delClick==true"> --> 
-     <input #Delete type="text" placeholder="Entrez l'Id de la bière">
-     <button class="btn btn-danger" (click)="DeleteBiere(Delete.value)">Suppress</button>
-  <!-- </div> --> 
-   </form>
-
-<table class="table">
+<table class="table table-bordered table-hover">
     <thead>
       <tr>
         <th scope="col">idBiere</th>
@@ -24,6 +18,13 @@
         <td>{{uL.cat.nomCat}}</td>
         <td>{{uL.style.nom}}</td>
         <td>{{uL.degre}}</td>
+        <td>
+          <i class="fa fa-edit editStyle" routerLink="/editbiere/{{uL.idBiere}}"></i>
+          <i class="fa fa-times deleteStyle" (click)="DeleteBiere(uL.idBiere)"></i>
+        </td>
       </tr>
     </tbody>
   </table>
+
+</div>
+</section>

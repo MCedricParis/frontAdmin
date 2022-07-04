@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestionavis',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionavisComponent implements OnInit {
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient,
+    private route:Router) { 
 
   }
   
@@ -19,10 +21,9 @@ export class GestionavisComponent implements OnInit {
       this.http.get("http://localhost:8086/avis/").subscribe({
         next: (data) => {
           this.avisList = data;
-          //this.route.navigateByUrl('/profile')
         },
         error: (err) => { console.log(err) }
   
       });
-  }
-}
+  }}
+

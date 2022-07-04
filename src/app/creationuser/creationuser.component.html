@@ -1,6 +1,7 @@
-<form style="background-color: white; padding: 3%; width: fit-content; border-radius: 2%;" #adminForm="ngForm"
+<section class="hero-section">
+<form style="padding: 3%; width: fit-content; border-radius: 2%;" #adminForm="ngForm"
       (ngSubmit)="submit(adminForm)">
-      <div class="title"> Create user ({{userId}}) </div>
+      <div class="title" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;"> Mise à jour utilisateur ({{userId}}) </div>
 
       <div class="md-form">
 
@@ -55,7 +56,7 @@
         <input 
         name="password" 
         id="password" 
-        type="text" 
+        type="password" 
         #password 
         class="form-control" 
         [(ngModel)]="user.password"
@@ -66,6 +67,7 @@
       <div class="text-center">
 
         <button class="btn btn-warning btm-sm btn-bloc" type=submit>Confirmation</button>
+        <a class="btn btn-light btm-sm btn-bloc" href="/gestionuser">Retour</a>
 
       </div>
 
@@ -73,3 +75,4 @@
 
 <p *ngIf="success"> {{messagesuccess}} </p>
 <p *ngIf="error"> {{messageerror}}</p>
+</section>

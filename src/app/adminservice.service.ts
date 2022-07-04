@@ -26,4 +26,26 @@ baseUrl = 'http://localhost:8086/';
     return this.http.put(this.baseUrl + "user/update/" + userId, user);
   }
 
+  getBarById(barId:number):Observable<any>{
+    return this.http.get(this.baseUrl+ "bars/" + barId);
+  }
+
+  postBar(bar:any):Observable<any>{
+    return this.http.post(this.baseUrl + "bar", bar);
+  }
+  updateBar(barId:number, bar:any):Observable<any>{
+    return this.http.put(this.baseUrl + "bar/update/" + barId, bar);
+  }
+
+
+  getBeerById(beerId:number):Observable<any>{
+    return this.http.get(this.baseUrl+ "bieres/" + beerId);
+  }
+
+  postBeer(beer:any):Observable<any>{
+    return this.http.post(this.baseUrl + "biere", beer);
+  }
+  updateBeer(beerId:number, beer:any):Observable<any>{
+    return this.http.put(this.baseUrl + "biere/update/" + beerId, beer);
+  }
 }

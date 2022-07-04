@@ -1,12 +1,6 @@
-<form>
-  <!-- <button class="btn btn-danger" (click)="Delete()">Suppress</button>
- <div *ngIf="delClick==true"> --> 
-   <input #Delete type="text" placeholder="Entrez l'Id de bar">
-   <button class="btn btn-danger" (click)="DeleteBar(Delete.value)">Suppress</button>
-<!-- </div> --> 
- </form>
-
-<table class="table">
+<section class="hero-section">
+<div class="table-scroll scrollbar">
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th scope="col">idBar</th>
@@ -25,9 +19,15 @@
       <td>{{uL.debHapp}}</td>
       <td>{{uL.finHapp}}</td>
       <td>{{uL.siteWeb}}</td>
+      <td>
+        <i class="fa fa-edit editStyle" routerLink="/editBar/{{uL.idBar}}"></i>
+        <i class="fa fa-times deleteStyle" (click)="DeleteBar(uL.idBar)"></i>
+      </td>
     </tr>
 
 
 
   </tbody>
 </table>
+</div>
+</section>

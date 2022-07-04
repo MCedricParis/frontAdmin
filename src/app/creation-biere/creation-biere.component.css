@@ -1,9 +1,12 @@
 .hero-section{
 
-    background-image: url(/assets/images/2563.jpg);
-    height: 100vh;
-    background-size: cover;
+    background-color: whitesmoke;
     text-align: center;
-    padding-top: 15%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+form{
+    background-color: whitesmoke;
+    margin: auto;
+    height: fit-content;
+    border: 5mm;
 }
