@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestionbiere',
@@ -10,7 +11,8 @@ export class GestionbiereComponent implements OnInit {
 
   biereList:any;
 
-constructor(private http:HttpClient) { 
+constructor(private http:HttpClient,
+  private route:Router) { 
 
 }
 
@@ -29,6 +31,7 @@ DeleteBiere(id:string){
   this.http.delete("http://localhost:8086/biere/" + id).subscribe({next: data =>
    {},error: (err) => { console.log(err) }
 })
+this.route.navigate(['/gestionbiere'])}
 }
 
-}
+
